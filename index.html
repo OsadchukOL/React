@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+
+    .test
+    {
+        background-color: brown;
+        color: blue;
+    }
+    .light{
+    background-color: rgb(255, 243, 240);
+    color: black;
+    }
+
+    h1,h2,h3,h4,p {
+        background-color: blue;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-left: 20px;
+        width: 300px;
+    }
+    div{
+
+        background-color: blue;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 350px;
+
+    }
+    img {
+margin-left: 25px ;
+
+width: 300px;
+height: 400px;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div id = "main"></div>
+
+    <script type="text/babel">
+
+        const testclass = "light"
+        let mystyle ={
+            backgroundColor: "red",
+            fontFamily: "Verdana",
+            border: '2px solid black',
+            borderRadius: '10px',
+            marginLeft: '20px'
+            
+
+        }
+        mystyle.backgroundColor ='aqua';
+
+        let div = document.getElementById("main")
+
+        const root = ReactDOM.createRoot(div);
+        root.render(
+            <div className = {testclass}>
+
+                <h1 style = {mystyle}>Агата Кристи</h1>  
+                <h2>Смерть на Ниле </h2>
+                <h3>детектив</h3>
+                <p>368 страниц</p>
+                <p>Роман Агаты Кристи «Смерть на Ниле» является классическим образцом детективного жанра.
+
+Произведение отличается продуманным сюжетом, замкнутым пространством действия и большим количеством персонажей, каждый из которых имеет мотив и скрытые намерения. Автор мастерски выстраивает интригу и последовательно подводит читателя к неожиданной развязке.</p>
+                 
+                        
+ 
+               
+
+
+
+                <img src="https://knigograd.com/images/detailed/cover1__w60016035779505f94a85e62503.jpg" alt="smailik"/>
+                
+
+                
+            </div> 
+        )
+  
+
+                  
+    </script>
+</body>
+</html>

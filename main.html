@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <style>
+        .test {
+            background-color: brown;
+            color: blue;
+        }
+
+        .light {
+            background-color: rgb(255, 243, 240);
+            color: black;
+        }
+
+        h1, h2, h3, h4, p {
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-left: 20px;
+            width: 300px;
+        }
+
+        div {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 350px;
+        }
+
+        img {
+            margin-left: 25px;
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main"></div>
+
+    
+
+    <script type="text/babel">
+        const testclass = "light";
+
+        let mystyle = {
+            backgroundColor: "aqua",
+            fontFamily: "Verdana",
+            border: "2px solid black",
+            borderRadius: "10px",
+            marginLeft: "20px"
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById("main"));
+
+        root.render(
+            <div className={testclass}>
+                <h1 style={mystyle}>Maptov</h1>
+                <h2>Я выберу тебя</h2>
+                
+
+
+
+                <iframe
+                    style={{ borderRadius: "12px", marginLeft: "20px" }}
+                    src="https://open.spotify.com/embed/track/77G88h1HzYNqxtEHhZ9tIM?utm_source=generator"
+                    width="300px"
+                    height="352"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+        );
+    </script>
+
+</body>
+</html>
