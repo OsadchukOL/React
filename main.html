@@ -57,26 +57,30 @@
             marginLeft: "20px"
         };
 
+        const
+
         const root = ReactDOM.createRoot(document.getElementById("main"));
 
-        root.render(
-            <div className={testclass}>
-                <h1 style={mystyle}>Maptov</h1>
-                <h2>Я выберу тебя</h2>
-                
+       root.render(
+        <div style={div}>
+        <h1 style={h1}>Maptov</h1>
+        <h2 style={h2}>Я выберу тебя</h2>
 
+        <p style={text}>368 страниц</p>
+        <p style={text}>
+            Роман Агаты Кристи «Смерть на Ниле» является классическим образцом детективного жанра.
+            Произведение отличается продуманным сюжетом, замкнутым пространством действия и большим
+            количеством персонажей, каждый из которых имеет мотив и скрытые намерения. Автор
+            мастерски выстраивает интригу и последовательно подводит читателя к неожиданной развязке.
+        </p>
 
-
-                <iframe
-                    style={{ borderRadius: "12px", marginLeft: "20px" }}
-                    src="https://open.spotify.com/embed/track/77G88h1HzYNqxtEHhZ9tIM?utm_source=generator"
-                    width="300px"
-                    height="352"
-                    frameBorder="0"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-                </iframe>
-            </div>
+        <iframe
+            style={iframe}
+            src="https://open.spotify.com/embed/track/77G88h1HzYNqxtEHhZ9tIM?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+    </div>
         );
     </script>
 
