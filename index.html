@@ -2,96 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>React Object Styles</title>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <style>
-
-    .test
-    {
-        background-color: brown;
-        color: blue;
-    }
-    .light{
-    background-color: rgb(255, 243, 240);
-    color: black;
-    }
-
-    h1,h2,h3,h4,p {
-        background-color: blue;
-        border: 2px solid black;
-        border-radius: 10px;
-        margin-left: 20px;
-        width: 300px;
-    }
-    div{
-
-        background-color: blue;
-        border: 2px solid black;
-        border-radius: 10px;
-        width: 350px;
-
-    }
-    img {
-margin-left: 25px ;
-
-width: 300px;
-height: 400px;
-    }
-
-    </style>
-
 </head>
 <body>
 
-    <div id = "main"></div>
+<div id="main"></div>
 
-    <script type="text/babel">
+<script type="text/babel">
 
-        const testclass = "light"
-        let mystyle ={
-            backgroundColor: "red",
-            fontFamily: "Verdana",
-            border: '2px solid black',
-            borderRadius: '10px',
-            marginLeft: '20px'
-            
+const divStyle = {
+    backgroundColor: "rgb(255, 243, 240)",
+    color: "black",
+    border: "2px solid black",
+    borderRadius: "10px",
+    width: "350px",
+    paddingBottom: "10px"
+};
 
-        }
-        mystyle.backgroundColor ='aqua';
+const h1 = {
+    backgroundColor: "aqua",
+    fontFamily: "Verdana",
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px"
+};
 
-        let div = document.getElementById("main")
+const h2 = {
+    backgroundColor: "blue",
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px"
+};
 
-        const root = ReactDOM.createRoot(div);
-        root.render(
-            <div className = {testclass}>
+const h3 = {
+    backgroundColor: "blue",
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px"
+};
 
-                <h1 style = {mystyle}>Агата Кристи</h1>  
-                <h2>Смерть на Ниле </h2>
-                <h3>детектив</h3>
-                <p>368 страниц</p>
-                <p>Роман Агаты Кристи «Смерть на Ниле» является классическим образцом детективного жанра.
+const text = {
+    backgroundColor: "blue",
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px"
+};
 
-Произведение отличается продуманным сюжетом, замкнутым пространством действия и большим количеством персонажей, каждый из которых имеет мотив и скрытые намерения. Автор мастерски выстраивает интригу и последовательно подводит читателя к неожиданной развязке.</p>
-                 
-                        
- 
-               
+const imgStyle = {
+    marginLeft: "25px",
+    width: "300px",
+    height: "400px",
+    borderRadius: "10px"
+};
 
+const root = ReactDOM.createRoot(document.getElementById("main"));
 
+root.render(
+    <div style={divStyle}>
+        <h1 style={h1}>Агата Кристи</h1>
+        <h2 style={h2}>Смерть на Ниле</h2>
+        <h3 style={h3}>детектив</h3>
 
-                <img src="https://knigograd.com/images/detailed/cover1__w60016035779505f94a85e62503.jpg" alt="smailik"/>
-                
+        <p style={text}>368 страниц</p>
+        <p style={text}>
+            Роман Агаты Кристи «Смерть на Ниле» является классическим образцом детективного жанра.
+            Произведение отличается продуманным сюжетом, замкнутым пространством действия и большим
+            количеством персонажей, каждый из которых имеет мотив и скрытые намерения. Автор
+            мастерски выстраивает интригу и последовательно подводит читателя к неожиданной развязке.
+        </p>
 
-                
-            </div> 
-        )
-  
+        <img
+            style={imgStyle}
+            src="https://knigograd.com/images/detailed/cover1__w60016035779505f94a85e62503.jpg"
+            alt="book"
+        />
+    </div>
+);
 
-                  
-    </script>
+</script>
 </body>
 </html>
