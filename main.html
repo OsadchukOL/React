@@ -2,77 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <style>
-        .test {
-            background-color: brown;
-            color: blue;
-        }
-
-        .light {
-            background-color: rgb(255, 243, 240);
-            color: black;
-        }
-
-        h1, h2, h3, h4, p {
-            border: 2px solid black;
-            border-radius: 10px;
-            margin-left: 20px;
-            width: 300px;
-        }
-
-        div {
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 350px;
-        }
-
-        img {
-            margin-left: 25px;
-            width: 300px;
-            height: 400px;
-        }
-    </style>
 </head>
 <body>
 
-    <div id="main"></div>
+<div id="main"></div>
 
-    
+<script type="text/babel">
 
-    <script type="text/babel">
-        const testclass = "light";
+const divStyle = {
+    border: "2px solid black",
+    borderRadius: "10px",
+    width: "350px",
+    backgroundColor: "rgb(255, 243, 240)"
+};
 
-        let mystyle = {
-            backgroundColor: "aqua",
-            fontFamily: "Verdana",
-            border: "2px solid black",
-            borderRadius: "10px",
-            marginLeft: "20px"
-        };
+const h1 = {
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px",
+    backgroundColor: "aqua",
+    fontFamily: "Verdana"
+};
 
-        const
+const h2 = {
+    border: "2px solid black",
+    borderRadius: "10px",
+    marginLeft: "20px",
+    width: "300px",
+    backgroundColor: "lightblue"
+};
 
-        const root = ReactDOM.createRoot(document.getElementById("main"));
 
-       root.render(
-        <div style={div}>
+
+const iframe = {
+    borderRadius: "12px",
+    marginLeft: "20px",
+    width: "300px",
+    height: "352px",
+    border: "none"
+};
+
+const root = ReactDOM.createRoot(document.getElementById("main"));
+
+root.render(
+    <div style={divStyle}>
         <h1 style={h1}>Maptov</h1>
         <h2 style={h2}>Я выберу тебя</h2>
 
-        <p style={text}>368 страниц</p>
-        <p style={text}>
-            Роман Агаты Кристи «Смерть на Ниле» является классическим образцом детективного жанра.
-            Произведение отличается продуманным сюжетом, замкнутым пространством действия и большим
-            количеством персонажей, каждый из которых имеет мотив и скрытые намерения. Автор
-            мастерски выстраивает интригу и последовательно подводит читателя к неожиданной развязке.
-        </p>
+        
 
         <iframe
             style={iframe}
@@ -81,8 +64,9 @@
             loading="lazy">
         </iframe>
     </div>
-        );
-    </script>
+);
+
+</script>
 
 </body>
 </html>
